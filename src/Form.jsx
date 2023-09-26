@@ -10,12 +10,17 @@ const Form = () => {
       <h4>Color Generator</h4>
       <form className="color-form" onSubmit={handleSubmit}>
         <input
-          type="text"
-          placeholder="#f15025"
+          type="color"
           value={color}
           onChange={(e) => setColor(e.target.value)}
         />
-        <button type="submit" className="btn" style={{ background: "color" }}>
+        <input
+          type="text"
+          value={color}
+          onChange={(e) => setColor(e.target.value)}
+          placeholder="#f15025"
+        />
+        <button type="submit" className="btn" style={{ background: color }}>
           Submit
         </button>
       </form>
