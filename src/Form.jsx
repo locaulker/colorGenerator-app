@@ -1,13 +1,17 @@
 import { useState } from "react"
 
-const Form = () => {
+const Form = ({ addColor }) => {
   const [color, setColor] = useState("")
 
-  const handleSubmit = (e) => {}
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    addColor(color)
+  }
 
   return (
     <section className="container">
-      <h4>Color Generator</h4>
+      <h4>Click to Generate:</h4>
+
       <form className="color-form" onSubmit={handleSubmit}>
         <input
           type="color"

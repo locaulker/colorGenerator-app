@@ -1,6 +1,5 @@
 const SingleColor = ({ index, color }) => {
   const { hex, weight } = color
-  console.log(color)
 
   return (
     <article
@@ -8,7 +7,7 @@ const SingleColor = ({ index, color }) => {
       style={{ background: `#${hex}` }}
     >
       <p className="percent-value">{weight}%</p>
-      <p className="color-value">{hex.toUpperCase()}%</p>
+      <p className="color-value">{hex.toUpperCase()}</p>
     </article>
   )
 }
